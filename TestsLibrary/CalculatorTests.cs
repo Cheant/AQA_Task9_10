@@ -7,8 +7,8 @@ namespace TestsLibrary
     [TestFixture]
     public class CalculatorTests
     {
-        private double _x = 8;
-        private double _y = 2;
+        private double _x ;
+        private double _y;
         private double _expected;
         private double _actual;
 
@@ -17,15 +17,15 @@ namespace TestsLibrary
         [SetUp]
         public void SetUp()
         {
-            Console.WriteLine("SetUp");
-            Console.ReadKey();
+            _x = 8;
+            _y = 2;
         }
 
         [TearDown]
         public void TearDown()
         {
-            Console.WriteLine("TearDown");
-            Console.ReadKey();
+            _x = 0;
+            _y = 0;
         }
 
         [Test]
